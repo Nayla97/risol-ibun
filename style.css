@@ -223,3 +223,62 @@
     margin: 8px 0;
     color: #555;
 }
+
+/* ===========================
+   RESPONSIVE MOBILE
+   =========================== */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 15px 20px;
+    }
+
+    .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo span {
+        font-size: 18px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    /* Jumbotron */
+    .jumbotron {
+        padding: 60px 20px;
+    }
+
+    .jumbotron h1 {
+        font-size: 28px;
+    }
+
+    .jumbotron p {
+        font-size: 16px;
+    }
+
+    /* Card Intro */
+    .product-intro {
+        padding: 40px 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    /* Why Section */
+    .why {
+        padding: 60px 20px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 30px 15px;
+    }
+}
