@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Kontak</title>
+    <link href="stylecontact.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo-risol.jpg" alt="Logo Risol Ibun">
+            <span>Risol Ibun</span>
+        </div>
+
+    <ul class="nav-menu">
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="#" class="active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact">
+        <h1>Hubungi Kami</h1>
+        <p class="subtitle">
+            Punya pertanyaan atau ingin pesan Risol Ibun?
+            Hubungi kami melalui kontak di bawah ini
+        </p>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Informasi Kontak</h3>
+                <p><strong>WhatsApp : </strong> 081514212160 </p>
+                <p><strong>Instagram : </strong> @risol.ibunn </p>
+
+                <h4>Jam Operasional</h4>
+                <p>Setiap hari (kecuali Jumat) : 08.00 - 16.30</p>
+
+                <a class="order-big-btn" href="https://wa.me/6281514212160?text=Halo%20kak%2C%20saya%20mau%20pesan%20Risol%20Ibun." target="_blank">
+                    Pesan Sekarang
+                </a>
+            </div>
+            
+         <div class="contact-form">
+    <h3>Kirim Pesan</h3>
+    <form onsubmit="kirimWA(); return false;">
+        <input type="text" id="nama" placeholder="Nama" required>
+        <input type="text" id="nowa" placeholder="No. WhatsApp" required>
+        <textarea id="pesan" placeholder="Pesan" required></textarea>
+        <button type="submit">Kirim Pesan</button>
+    </form>
+</div>
+
+<script>
+function kirimWA() {
+    var nama = document.getElementById("nama").value;
+    var nowa = document.getElementById("nowa").value;
+    var pesan = document.getElementById("pesan").value;
+
+    var noTujuan = "6281514212160";
+
+    var text =
+        "Halo Risol Ibun\n\n" +
+        "Nama: " + nama + "\n" +
+        "No WA: " + nowa + "\n" +
+        "Pesan: " + pesan;
+
+    var url = "https://wa.me/" + noTujuan + "?text=" + encodeURIComponent(text);
+
+    window.location.href = url;
+}
+</script>
+</div>
+</section>
+
+    <footer class="footer">
+        <p class="copy">&copy;Risol Ibun. All rights reserved.</p>
+      </footer>
+      
+</body>
+</html>

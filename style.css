@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    background: #ffe9c5;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img{
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+
+}
+
+.logo span{
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+}
+
+.nav-menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a{
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;       /* wajib untuk animasi */
+    padding-bottom: 5px;      /* buat space bawah */
+    transition: color 0.3s ease;
+}
+
+/* garis underline animasi */
+.nav-menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #ff7b00;   /* warna underline */
+    transition: 0.3s ease;
+}
+
+/* saat hover: garis muncul dari kiri */
+.nav-menu a:hover{
+    color: #d2691e;
+}
+
+.nav-menu a:hover::after{
+    width: 100%;
+}
+
+/* menu yang active punya underline permanen */
+.nav-menu a.active{
+    color: #ff7b00;
+}
+
+.nav-menu a.active::after{
+    width: 100%;
+}
+
+
+/* Jumbotron */
+.jumbotron{
+    padding: 100px 40px;
+    text-align: center;
+    background: #fff5e6;
+    border-bottom: 2px solid #f1c27d;
+}
+
+.jumbotron h1{
+    font-size: 40px;
+    color: #d2691e;
+    margin-bottom: 15px;
+}
+
+.jumbotron p{
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #444;
+}
+
+.btn-jumbo{
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #d2691e;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.btn-jumbo:hover{
+    background-color: #a55317;
+}
+
+/* Card */
+.product-intro{
+    padding: 60px 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.card{
+    width: 350px;
+    background: #fffdf8;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+}
+
+.card-content{
+    padding: 20px;
+}
+
+.card-content h3{
+    color: #d2691e;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.card-content p{
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.card-content:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0 8px 14px rgba(0,0,0,0.15);
+}
+
+/* Why Section */
+.why {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.why h2 {
+    color: #d2691e;
+    margin-bottom: 40px;
+}
+
+/* Grid 6 Card */
+.why-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.why-card {
+    background: #fffdf8;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.why-card:hover {
+    transform: translateY(-6px);
+}
+
+.why-card h3 {
+    color: #d2691e;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #555;
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .why-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .why-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* Footer */
+.footer{
+    background-color: #ffefe0;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 80px;
+    border-top: 3px solid #ff8c1a;
+}
+
+.footer p{
+    margin: 8px 0;
+    color: #555;
+}
